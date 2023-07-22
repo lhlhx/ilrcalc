@@ -26,8 +26,8 @@ function App(props) {
     const [splitDates, setSplitDates] = useState([]);
     const [filter, setFilter] = useState("All");
 
-    const [visaStartDate, setVisaStartDate] = useState('2021-01-31');
-    const [visaEndDate, setVisaEndDate] = useState('2026-01-31');
+    const [visaStartDate, setVisaStartDate] = useState('2021-01-01');
+    const [visaEndDate, setVisaEndDate] = useState('2026-01-01');
     const [firstEntryDate, setFirstEntryDate] = useState('2021-01-31');
 
     useEffect(() => {

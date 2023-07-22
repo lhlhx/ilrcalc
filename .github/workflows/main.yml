@@ -39,10 +39,10 @@ jobs:
           cmd: install
       - name: Build production bundle
         uses: borales/actions-yarn@v4
+        env:
+          CI: ""
         with:
           cmd: build
-          env:
-            CI: ""
 
       - name: Setup pages
         uses: actions/configure-pages@v2

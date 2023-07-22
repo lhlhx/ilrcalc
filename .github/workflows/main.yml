@@ -42,7 +42,7 @@ jobs:
         with:
           cmd: build
           env:
-            CI: false
+            CI: ""
 
       - name: Setup pages
         uses: actions/configure-pages@v2

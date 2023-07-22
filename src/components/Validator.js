@@ -54,11 +54,11 @@ function Validator(props) {
         let complianceArray = [];
         for (let i = 0; i < monthList.length; i++) {
             let absDays = 0;
-            for (const monthInInspection of monthList.slice(i, i+6)) {
+            for (const monthInInspection of monthList.slice(i, i+12)) {
                 const absDateArray = visaPeriodMonthMap.get(monthInInspection);
                 absDays = absDays + absDateArray.length;
             }
-                const msg = { start_month: monthList[i] , end_month: monthList[i+5], days_of_absence: absDays };
+                const msg = { start_month: monthList[i] , end_month: monthList[i+11], days_of_absence: absDays };
                 complianceArray = complianceArray.concat(msg);
         }
         return complianceArray;

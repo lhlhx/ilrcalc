@@ -23,7 +23,6 @@ const FILTER_NAMES = Object.keys(FILTER_MAP);
 
 function App(props) {
     const [periods, setPeriods] = useState(props.periods);
-    const [splitDates, setSplitDates] = useState([]);
     const [filter, setFilter] = useState("All");
 
     const [visaStartDate, setVisaStartDate] = useState('2021-01-01');

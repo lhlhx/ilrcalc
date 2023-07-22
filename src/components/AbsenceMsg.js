@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function NonComplianceMsg(props) {
     return (<li>{props.startMonth} - {props.endMonth}: {props.daysOfAbsence} days</li>);
@@ -15,16 +15,16 @@ export default function ComplianceMsg(props) {
 
     useEffect(() => {
         setNonComplianceArray([]);
-        if (props.textOutput == "") {
+        if (props.textOutput === "") {
             let isCompliant = true;
-            let nonComplianceArrayL = new Array();
+            let nonComplianceArrayL = [];
             for (const element of props.complianceArray) {
                 if (element.days_of_absence > 179) {
                     nonComplianceArrayL = nonComplianceArrayL.concat(element);
                     isCompliant = false;
                 }
             }
-            if (isCompliant == false) {
+            if (isCompliant === false) {
                 setTextOutput("Non  Compliant!")
             } else {
                 setTextOutput("All periods match compliance. Hooray!")
